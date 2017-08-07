@@ -12,6 +12,15 @@ f.entry(title: _("Credentials"), field: "credentialsId",
     c.select()
 }
 
+/*
+if (connectionParameters.teamCollectionUrl) {
+    "This TFS/VSTS server is connected."
+    if (connectionParameters.sendJobCompletionEvents) {
+        "Job completion events will be sent to the TFS/VSTS server."
+    }
+}
+*/
+
 f.block() {
     f.validateButton(
             title: _("Test connection"),

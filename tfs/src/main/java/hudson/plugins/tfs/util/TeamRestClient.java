@@ -287,4 +287,23 @@ public class TeamRestClient {
 
         return request(TeamGitStatus.class, HttpMethod.POST, requestUri, status);
     }
+
+
+    public void sendJobCompletionEvent(final GitCodePushedEventArgs args, final TeamGitStatus status) throws IOException {
+        final QueryString qs = new QueryString(API_VERSION, "2.1");
+        /*
+        final URI requestUri = UriHelper.join(
+                collectionUri, args.projectId,
+                "_apis", "git",
+                "repositories", args.repoId,
+                "commits", args.commit,
+                "statuses",
+                qs);
+
+        final JSONArray doc = new JSONArray();
+
+        request(Void.class, HttpMethod.PATCH, requestUri, doc);
+        */
+    }
+
 }
